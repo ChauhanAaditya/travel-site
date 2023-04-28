@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="Bookingpage.css">
+</head>
+<body>
+    <form action="reservation.php" method="post">
+        <div class="elem-group">
+          &nbsp;
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="visitor_name" placeholder="Jindal Saab" pattern=[A-Z\sa-z]{3,20} required>
+        </div>
+        &nbsp;
+        <div class="elem-group">
+          <label for="email">Your E-mail</label>
+          <input type="email" id="email" name="visitor_email" placeholder="Jindal_saab132@gmail.com" required>
+        </div>
+        &nbsp;
+        <div class="elem-group">
+          <label for="phone">Your Phone</label>
+          <input type="tel" id="phone" name="visitor_phone" placeholder="XXX-XXX-XXXX" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+        </div>
+        &nbsp;
+        <hr>
+        <div class="elem-group inlined">
+          <label for="adult">Adults</label>
+          <input type="number" id="adult" name="total_adults" placeholder="5" min="1" required>
+        </div>
+        <div class="elem-group inlined">
+          <label for="child">Children</label>
+          <input type="number" id="child" name="total_children" placeholder="5" min="0" required>
+        </div>
+        <div class="elem-group inlined">
+          <label for="checkin-date">Check-in Date</label>
+          <input type="date" id="checkin-date" name="checkin" required>
+        </div>
+        <div class="elem-group inlined">
+          <label for="checkout-date">Check-out Date</label>
+          <input type="date" id="checkout-date" name="checkout" required>
+        </div>
+        <div class="elem-group">
+          <label for="room-selection">Select Preference</label>
+          <select id="room-selection" name="room_preference" required>
+            <option value="Enter Here">Enter Here</option>
+            <option value="connecting">Connecting</option>
+              <option value="adjoining">Adjoining</option>
+              <option value="adjacent">Adjacent</option>
+          </select>
+        </div>
+        <hr>
+        <div class="elem-group">
+          <label for="message">Anything Else?</label>
+          <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+        </div>
+        <button type="submit">Confirm submission</button>
+      </form>
+</body>
+</html>
